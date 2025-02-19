@@ -1,0 +1,18 @@
+<div class="container">
+  <div *ngIf="users" class="container__grid">
+    @for (user of users; track user.id) {
+    <app-user-card
+      (click)="onCardClick(user.login)"
+      (keydown.enter)="onCardClick(user.login)"
+      [avatar_url]="user.avatar_url"
+      [username]="user.login"
+      [type]="user.type"
+      [id]="user.id"
+      role="button"
+      tabindex="0"
+      [attr.aria-label]="'User: ' + user.login"
+    ></app-user-card>
+    }
+  </div>
+  <button>Load 10 More Users</button>
+</div>

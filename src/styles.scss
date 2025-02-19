@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #e9e8e8;
+}
+
+button {
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: 3px solid gray;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}

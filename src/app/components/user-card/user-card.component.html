@@ -1,0 +1,16 @@
+<ng-container>
+  <div class="user-card">
+    <div class="user-card__container">
+      <div class="user-card__avatar">
+        <img [src]="avatar_url" [alt]="(username | titlecase) + ' Profile Image'" />
+      </div>
+      <div class="user-card__info">
+        <div class="user-card__info__username">
+          {{ username }}
+        </div>
+        <div class="user-card__info__name">User Type: {{ type }}</div>
+        <div class="user-card__info__email">User ID: {{ id }}</div>
+      </div>
+    </div>
+  </div>
+</ng-container>

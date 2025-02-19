@@ -1,0 +1,61 @@
+:host {
+    width: fit-content;
+}
+
+.user-card {
+    width: fit-content;
+    margin-inline: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px gray;
+    padding: 20px 30px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 10px 10px 25px gray;
+    }
+
+    &__container {
+        display: flex   ;  
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__avatar {
+        width: 15rem;
+        height: 15rem;
+        overflow: hidden;
+        border-radius: 50%;
+        box-shadow: 5px 5px 20px gray;
+
+        img {
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        &__username {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgb(59, 59, 59);
+            text-transform: uppercase;
+        }
+
+        &__name {
+            color: rgb(95, 95, 95);
+            text-transform: capitalize;
+        }
+
+        &__email {
+            color: rgb(95, 95, 95);
+        }
+    }
+}
