@@ -1,5 +1,5 @@
 <div class="container">
-  <div *ngIf="users" class="container__grid">
+  <div *ngIf="users() as users" class="container__grid">
     @for (user of users; track user.id) {
     <app-user-card
       (click)="onCardClick(user.login)"
@@ -14,5 +14,5 @@
     ></app-user-card>
     }
   </div>
-  <button>Load 10 More Users</button>
+  <button (click)="loadMoreUsers()">Load 10 More Users</button>
 </div>

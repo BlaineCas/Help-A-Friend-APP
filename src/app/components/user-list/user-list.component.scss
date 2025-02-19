@@ -9,14 +9,14 @@ app-user-card {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-
+  
   &__grid {
+    max-width: 1200px; /* Opțional, pentru a evita lățimi excesive */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se ajustează dinamic */
     justify-items: center;
     gap: 10px;
     margin-inline: auto;
     padding: 10px; /* Adăugat pentru un aspect mai aerisit */
-    max-width: 1200px; /* Opțional, pentru a evita lățimi excesive */
   }
 }

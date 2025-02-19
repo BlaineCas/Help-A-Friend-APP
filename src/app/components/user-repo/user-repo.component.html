@@ -1,0 +1,15 @@
+<ng-container>
+  <div class="user-repo">
+    <div class="user-repo__container">
+      <div class="user-repo__info">
+        <div class="user-repo__info__header">
+          <div class="user-repo__info__header__name">{{ name | titlecase }}</div>
+          <div class="user-repo__info__header__visibility">{{ visibility | titlecase }}</div>
+        </div>
+        <div class="user-repo__info__description">{{ description | titlecase }}</div>
+        <div class="user-repo__info__language">Programming Language: {{ language }}</div>
+        <div class="user-repo__info__language">Clone URL: <a href="{{ clone_url }}" target="_blank">Clone</a></div>
+      </div>
+    </div>
+  </div>
+</ng-container>

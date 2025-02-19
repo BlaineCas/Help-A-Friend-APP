@@ -1,1 +1,21 @@
-<p>user-details works!</p>
+<div class="container">
+  <app-user-card
+    *ngIf="user$ | async as user"
+    [avatar_url]="user.avatar_url"
+    [username]="user.login"
+    [type]="user.type"
+    [id]="user.id"
+  ></app-user-card>
+
+  <div *ngIf="repos$ | async as repos" class="container__repos">
+    @for (repo of repos; track repo.id) {
+    <app-user-repo
+      [name]="repo.name"
+      [description]="repo.description"
+      [visibility]="repo.visibility"
+      [language]="repo.language"
+      [clone_url]="repo.clone_url"
+    ></app-user-repo>
+    }
+  </div>
+</div>
